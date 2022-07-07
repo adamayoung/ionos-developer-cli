@@ -1,7 +1,7 @@
 @testable import IONOSDeveloperCore
 import XCTest
 
-final class DNSServiceTests: XCTestCase {
+final class DomainIONOSServiceTests: XCTestCase {
 
     func testExample() {
         XCTAssertTrue(true)

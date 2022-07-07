@@ -6,6 +6,10 @@ import PackageDescription
 let package = Package(
     name: "ionos-developer-cli",
 
+    platforms: [
+        .macOS(.v12), .iOS(.v15), .tvOS(.v15), .watchOS(.v8)
+    ],
+
     products: [
         .executable(
             name: "ionos",
@@ -30,13 +34,16 @@ let package = Package(
             ]
         ),
 
-        .target(
-            name: "IONOSDeveloperCore",
-            dependencies: []
-        ),
+            .target(
+                name: "IONOSDeveloperCore",
+                dependencies: []
+            ),
         .testTarget(
             name: "IONOSDeveloperCoreTests",
-            dependencies: ["IONOSDeveloperCore"]
+            dependencies: ["IONOSDeveloperCore"],
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
