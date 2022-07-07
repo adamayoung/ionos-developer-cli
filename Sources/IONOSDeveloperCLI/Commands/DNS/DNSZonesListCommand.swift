@@ -1,7 +1,6 @@
 import ArgumentParser
 import Foundation
 import IONOSDeveloperCore
-import Table
 
 struct DNSZonesListCommand: AsyncParsableCommand {
 
