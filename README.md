@@ -12,7 +12,7 @@ A Swift Package for IONOS Developer API <https://developer.hosting.ionos.com>, w
 
 ### [Swift Package Manager](https://github.com/apple/swift-package-manager)
 
-Add the TMDb package as a dependency to your `Package.swift` file, and add it as a dependency to your target.
+Add the IONOSDeveloperCore package as a dependency to your `Package.swift` file, and add it as a dependency to your target.
 
 ```swift
 // swift-tools-version:5.6
