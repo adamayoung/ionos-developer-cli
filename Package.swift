@@ -50,10 +50,6 @@ let package = Package(
         .target(
             name: "IONOSDeveloperCLIUtils",
             dependencies: []
-        ),
-        .testTarget(
-            name: "IONOSDeveloperCLIUtilsTests",
-            dependencies: ["IONOSDeveloperCLIUtils"]
         )
     ]
 )

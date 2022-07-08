@@ -8,13 +8,12 @@ public struct APIKeyStore {
         try apiKey.write(toFile: apiKeyFilePath, atomically: true, encoding: .utf8)
     }
 
-    public static func getAPIKey() -> String {
+    public static func getAPIKey() -> String? {
         guard fileManager.isReadableFile(atPath: apiKeyFilePath) else {
-            return ""
+            return nil
         }
 
-        let apiKey = try? String(contentsOfFile: apiKeyFilePath)
-        return apiKey ?? ""
+        return try? String(contentsOfFile: apiKeyFilePath)
     }
 
 }
