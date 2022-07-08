@@ -29,21 +29,31 @@ let package = Package(
         .executableTarget(
             name: "IONOSDeveloperCLI",
             dependencies: [
+                "IONOSDeveloperCLIUtils",
                 "IONOSDeveloperCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
             ]
         ),
 
-            .target(
-                name: "IONOSDeveloperCore",
-                dependencies: []
-            ),
+        .target(
+            name: "IONOSDeveloperCore",
+            dependencies: []
+        ),
         .testTarget(
             name: "IONOSDeveloperCoreTests",
             dependencies: ["IONOSDeveloperCore"],
             resources: [
                 .process("Resources")
             ]
+        ),
+
+        .target(
+            name: "IONOSDeveloperCLIUtils",
+            dependencies: []
+        ),
+        .testTarget(
+            name: "IONOSDeveloperCLIUtilsTests",
+            dependencies: ["IONOSDeveloperCLIUtils"]
         )
     ]
 )

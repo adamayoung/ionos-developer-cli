@@ -1,5 +1,6 @@
 import ArgumentParser
 import Foundation
+import IONOSDeveloperCLIUtils
 
 struct GlobalOptions: ParsableArguments {
 
@@ -7,6 +8,6 @@ struct GlobalOptions: ParsableArguments {
         name: [.customShort("k"), .customLong("apikey")],
         help: "IONOS Developer API Key."
     )
-    var apiKey: String
+    var apiKey: String = APIKeyStore.getAPIKey()
 
 }
