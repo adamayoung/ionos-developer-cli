@@ -54,7 +54,7 @@ swift run ionos auth <api-key>
 
 ### Set API key with Environment variable
 
-```
+```bash
 export IONOS_API_KEY=<api-key>
 ```
 
