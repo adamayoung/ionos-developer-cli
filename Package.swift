@@ -49,7 +49,9 @@ let package = Package(
 
         .target(
             name: "IONOSDeveloperCLIUtils",
-            dependencies: []
+            dependencies: [
+                "IONOSDeveloperCore"
+            ]
         )
     ]
 )
