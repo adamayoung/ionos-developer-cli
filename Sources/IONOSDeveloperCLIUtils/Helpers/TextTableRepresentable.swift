@@ -1,6 +1,6 @@
 import Foundation
 
-protocol TextTableRepresentable {
+public protocol TextTableRepresentable {
 
     var columns: [String] { get }
 
@@ -8,7 +8,7 @@ protocol TextTableRepresentable {
 
 }
 
-extension TextTableRepresentable {
+public extension TextTableRepresentable {
 
     func renderTable(header: CustomStringConvertible? = nil) -> String {
         let columns = self.columns.map(TextTableColumn.init(header:))
@@ -19,7 +19,7 @@ extension TextTableRepresentable {
 
 }
 
-extension Collection where Element: CustomStringConvertible {
+public extension Collection where Element: CustomStringConvertible {
 
     func renderTable(columnName: String) -> String {
         let columns = [TextTableColumn(header: columnName)]
@@ -30,7 +30,7 @@ extension Collection where Element: CustomStringConvertible {
 
 }
 
-extension Collection where Element: CustomStringConvertible, Element: Comparable {
+public extension Collection where Element: CustomStringConvertible, Element: Comparable {
 
     func renderTable(columnName: String, sorted: Bool = true) -> String {
         let columns = [TextTableColumn(header: columnName)]

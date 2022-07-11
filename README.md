@@ -44,7 +44,27 @@ swift run ionos <command>
 
 Create an API key from The IONOS Developer API web site [https://developer.hosting.ionos.com/keys](https://developer.hosting.ionos.com/keys).
 
+### Set API key with a command
+
+Use this method to store you API key so other commands can be used without specifying it.
+
+```bash
+swift run ionos auth <api-key>
+```
+
+### Set API key with Environment variable
+
+```bash
+export IONOS_API_KEY=<api-key>
+```
+
 ## API Areas
+
+For a full set of commands,
+
+```bash
+swift run ionos --help
+```
 
 ### DNS
 
